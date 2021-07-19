@@ -1,0 +1,41 @@
+// best seen at 1500px or less
+
+html, body { height: 100%; }
+body {
+  background:#1ae8cb00;
+  overflow: hidden;
+}
+
+.ocean { 
+  height: 5%;
+  width:100%;
+  position:absolute;
+  bottom:0;
+  left:0;
+  background: #1ae8cb00;
+}
+
+.wave { background:url(https://cdn.statically.io/gh/SazumiVicky/sazumi.developer/d188ccf70f666e638cc41df69c2a1453e72d23ab/SazumiFooter.svg) repeat-x; 
+  position: absolute;
+  top: -198px;
+  width: 6400px;
+  height: 198px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) infinite;
+  transform: translate3d(0, 0, 0);
+}
+
+.wave:nth-of-type(2) {
+  top: -175px;
+  animation: wave 7s cubic-bezier( 0.36, 0.45, 0.63, 0.53) -.125s infinite, swell 7s ease -1.25s infinite;
+  opacity: 10;
+}
+
+@keyframes wave {
+  0% {
+    margin-left: 0;
+  }
+  100% {
+    margin-left: -1600px;
+  }
+}
+
